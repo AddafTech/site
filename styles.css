@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+}
+
+.container{
+    background-color: black; 
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 60px 0 60px;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav a{
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #D71313;
+    transition: width 0.4s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+nav li{
+    margin-left: 25px;
+    color: #EDEDED;
+    text-decoration: none;
+}
+
+.inicio {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 0.5;
+    visibility: visible;
+}
+
+.inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    z-index: 0;
+}
+
+.inicio-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-top: 70px;
+}
+
+.inicio-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #D71313, #F0DE36);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.inicio-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-family: "Open Sans", sans-serif;
+}
+
+.inicio-content .btn {
+    background: linear-gradient(45deg, #D71313, #F0DE36);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(215, 19, 19, 0.4);
+    font-family: "Raleway", sans-serif;
+    border: none;
+}
+
+.inicio-content .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(215, 19, 19, 0.6);
+}
+
+.QuemSomos{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.QuemSomos-esquerda{
+    width: 40%;
+}
+
+.QuemSomos-direita{
+    width: 60%;
+    padding: 0 40px 0 80px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.QuemSomos-direita .btn{
+    color: #F0DE36;
+    text-decoration: none;
+    border: 3px solid #D71313;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+}
+
+.texto{
+    font-size: 26px;
+    color: #EDEDED;
+    font-weight: bold;
+}
+
+.QuemSomos-esquerda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Documentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px;
+}
+
+.Documentos h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.documentos-lista{
+    max-width: 800px;
+    width: 100%;
+}
+
+.documentos-lista ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.documentos-lista li{
+    background-color: #000022;
+    border: 2px solid #D71313;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.documentos-lista li:hover{
+    transform: translateY(-2px);
+}
+
+.categoria-titulo{
+    color: #EDEDED;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.categoria-titulo::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.categoria-item.ativa .categoria-titulo::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.categoria-titulo:hover{
+    color: #F0DE36;
+}
+
+.categoria-conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 0;
+}
+
+.categoria-item.ativa .categoria-conteudo {
+    max-height: 200px;
+    margin-top: 15px;
+}
+
+.categoria-conteudo a {
+    color: #EDEDED;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    display: block;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #000022;
+    border: 1px solid #D71313;
+    transition: all 0.3s ease;
+}
+
+.categoria-conteudo a:hover {
+    color: #EDEDED;
+    background-color: #D71313;
+    transform: translateX(5px);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    nav {
+        margin: 0 20px;
+        height: 60px;
+    }
+    
+    .inicio-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+        margin-top: 60px;
+    }
+    
+    .inicio-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .inicio-content p {
+        font-size: 1.2rem;
+    }
+    
+    .inicio-content .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .video-background {
+        /* Em dispositivos móveis, garante que o vídeo cubra toda a tela */
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio-content h1 {
+        font-size: 2rem;
+    }
+    
+    .inicio-content p {
+        font-size: 1rem;
+    }
+    
+    .inicio-content {
+        padding: 1rem;
+    }
+}
